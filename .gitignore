@@ -1,0 +1,20 @@
+.DS_Store
+.venv/
+__pycache__/
+*.pyc
+
+# LaTeX build products
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+main.pdf
+
+# Downloaded and rendered inspection files
+tmp/
+output/

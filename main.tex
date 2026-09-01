@@ -1,0 +1,82 @@
+\documentclass{m3ailpreprint}
+
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{xspace}
+
+\title{A Reusable Preprint Template for Multimodal AI Research}
+
+\author[1,*]{First Author}
+\author[1,*]{Second Author}
+\author[1,2,\dagger]{Corresponding Author}
+
+\affiliation[1]{M$^3$AIL Research Group}
+\affiliation[2]{Partner Institution}
+
+\contribution{$^*$Equal contribution.}
+\contribution{$^\dagger$Corresponding author.}
+
+\abstract{%
+This document demonstrates the reusable M$^3$AIL preprint style extracted
+from the public source of the HERMES paper. The layout preserves the original
+title hierarchy, author block, metadata links, typography, and section styling.
+The abstract panel uses a plain white background rather than the source
+paper's cyan-to-blue gradient.
+}
+
+\checkdata[Correspondence]{\email{author@example.edu}}
+\checkdata[Project page]{\url{https://example.com/project}}
+\checkdata[Repository]{\url{https://github.com/example/project}}
+
+\begin{document}
+\maketitle
+
+\section{Introduction}
+\label{sec:introduction}
+
+Replace this sample text with the paper body. The template is designed for a
+single-column technical preprint and keeps the source paper's compact Palatino
+typography, blue section hierarchy, and title-page metadata block. Citations,
+equations, figures, and tables use standard LaTeX interfaces
+\citep{vaswani2017attention}.
+
+\subsection{Equations and references}
+
+Cross-references are colored consistently with the section headings. For
+example, \cref{eq:example} defines a compact attention-style computation:
+\begin{equation}
+  \operatorname{Attention}(Q,K,V)
+  = \operatorname{softmax}\!\left(\frac{QK^\top}{\sqrt{d}}\right)V.
+  \label{eq:example}
+\end{equation}
+
+\section{Results}
+
+Use professional rules rather than vertical lines for tables, as illustrated
+in \cref{tab:example}.
+
+\begin{table}[ht]
+  \centering
+  \caption{Example result table.}
+  \label{tab:example}
+  \begin{tabular}{lcc}
+    \toprule
+    Method & Accuracy $\uparrow$ & Latency $\downarrow$ \\
+    \midrule
+    Baseline & 72.1 & 1.00 \\
+    Proposed method & \textbf{76.4} & \textbf{0.61} \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\section{Conclusion}
+
+The project-specific title, author list, affiliations, abstract, metadata, and
+body content can all be edited directly in \texttt{main.tex}. Keep the
+transparent M$^3$AIL mark at \texttt{assets/m3ail-mark.png} to preserve the
+first-page branding shown by this template.
+
+\bibliographystyle{plainnat}
+\bibliography{references}
+
+\end{document}
