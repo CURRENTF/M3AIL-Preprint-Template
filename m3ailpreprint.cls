@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{m3ailpreprint}[2026/09/01 M3AIL preprint template]
+\ProvidesClass{m3ailpreprint}[2026/09/02 M3AIL preprint template]
 
 \PassOptionsToPackage{table}{xcolor}
 \LoadClassWithOptions{article}
@@ -138,7 +138,7 @@
 \renewcommand{\date}[1]{\checkdata[Date]{#1}}
 \newcommand{\correspondence}[1]{\checkdata[Correspondence]{#1}}
 
-% First-page brand mark. The PNG contains only the M3AIL icon and has alpha.
+% First-page brand marks. Both PNG files use transparent backgrounds.
 \newcommand{\mthreewordmark}{%
   {\fontsize{15}{15}\selectfont\bfseries\color{mthreeblue}%
    M\textsuperscript{3}AIL}%
@@ -151,6 +151,10 @@
       \includegraphics[height=13mm]{assets/m3ail-mark.png}%
       \hspace{0.7mm}%
       \raisebox{4.2mm}{\mthreewordmark}}%
+  }
+  \fancyhead[R]{%
+    \raisebox{-10mm}[0pt][0pt]{%
+      \includegraphics[height=13mm]{assets/hit-mark.png}}%
   }
   \fancyfoot[C]{\thepage}
   \renewcommand{\headrulewidth}{0pt}
